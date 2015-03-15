@@ -1,72 +1,141 @@
 <head>
 	<title><%= @config["basic"]["name"] %> | Resume</title>
-
 	<link rel="stylesheet" type="text/css" href="css/resume.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
 </head>
-<div class="container">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<header class="main row">
-				<div class="header">
-					<div class="col-md-6 col-sm-12">
-						<h1><%= @config["basic"]["name"] %></h1>
-						<h3><%= @config["basic"]["designation"] %></h3>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<header class="main row">
+					<div class="header">
+						<div class="col-md-6 col-sm-12">
+							<h1><%= @config["basic"]["name"] %></h1>
+							<h3><%= @config["basic"]["designation"] %></h3>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<img class="photo img-responsive img-circle pull-right"
+							src="img/profile.jpg">
+						</div>
 					</div>
-					<div class="col-md-6 col-sm-12">
-						<img class="photo img-responsive img-circle pull-right"
-						src="img/profile.jpg">
-					</div>
-				</div>
-
-				<div class="">
-					<div class="col-md-6 col-sm-12">
-						<dl class="contacts dl-horizontal">
-
-							<dt>Phone:</dt>
-							<dd><%= @config["basic"]["phone"] %></dd>
-
-							<dt>Email:</dt>
-							<dd>
-								<a href="mailto:<%= @config["basic"]["email"] %>">
-									<%= @config["basic"]["email"] %>
-								</a>
-							</dd>
-
-							<dt>Website:</dt>
-							<dd>
-								<a href="<%= @config["basic"]["website"] %>">
-									<%= @config["basic"]["website"] %>
-								</a>
-							</dd>
-
-						</dl>
-					</div>
-
-					<div class="col-md-6 col-sm-12">
-						<ul class="networks list-unstyled text-right">
-
-							<li>
-								<a href="https://twitter.com/<%= @config["online_handles"]["twitter"] %>">
-									twitter/<%= @config["online_handles"]["twitter"] %>
+					<div class="">
+						<div class="col-md-6 col-sm-12">
+							<dl class="contacts dl-horizontal">
+								<dt>Phone:</dt>
+								<dd><%= @config["basic"]["phone"] %></dd>
+								<dt>Email:</dt>
+								<dd>
+									<a href="mailto:<%= @config["basic"]["email"] %>">
+										<%= @config["basic"]["email"] %>
+									</a>
+								</dd>
+								<dt>Website:</dt>
+								<dd>
+									<a href="<%= @config["basic"]["website"] %>">
+										<%= @config["basic"]["website"] %>
+									</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<ul class="networks list-unstyled text-right">
+								<li>
+									<a href="https://twitter.com/<%= @config["online_handles"]["twitter"] %>">
+										twitter/<%= @config["online_handles"]["twitter"] %>
 								</a>
 							</li>
-
 							<li>
 								<a href="https://github.com/<%= @config["online_handles"]["github"] %>">
 									github/<%= @config["online_handles"]["github"] %>
-								</a>
-							</li>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/<%= @config["online_handles"]["linkedin"] %>">
+								linkedin/in/<%= @config["online_handles"]["linkedin"] %>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
 
-							<li>
-								<a href="https://www.linkedin.com/in/<%= @config["online_handles"]["linkedin"] %>">
-									linkedin/in/<%= @config["online_handles"]["linkedin"] %>
-								</a>
-							</li>
+	<section class="row">
+		<header class="col-md-3">
+			<h3>About</h3>
+		</header>
+		<div class="col-md-9">
+			<h3></h3>
+			A passionate programmer, interested in web/mobile development, machine learning and security.
+		</div>
+	</section>
+
+	<section class="row skills">
+		<header class="col-md-3">
+			<h3>Skills</h3>
+		</header>
+		<div class="col-md-9">
+			<div class="row skills">
+				<% @config["skills"].each do |item| %>
+					<div class="col-md-6">
+						<h4><%= item["title"] %></h4>
+						<ul>
+							<% item["contents"].each do |sub_item| %>
+								<li><%= sub_item %></li>
+							<% end %>
 						</ul>
 					</div>
+				<% end %>
+			</div>
+		</div>
+	</section>
+	
+	<section class="row">
+		<header class="col-md-3">
+			<h3>Work Experience</h3>
+		</header>
+		<div class="col-md-9">
+			<% @config["work_experience"].each do |item| %>
+				<div class="item">
+					<h3><%= item["company"] %></h3>
+					<strong><%= item["designation"] %></strong>
+					<p class="sticky"><%= item["time_span"] %></p>
+					<p class="sticky">
+						<a href="<%= item["website"] %>"><%= item["website"] %></a>
+					</p>
+					<p><%= item["summary"] %></p>
+					<ul>
+						<% item["responsibilities"].each do |responsibility| %>
+							<li><%= responsibility %></li>
+						<% end %>
+					</ul>
 				</div>
-			</header>
-		</li></h>
-	</header>
+			<% end %>
+		</div>
+	</section>
+
+	<section class="row">
+		<header class="col-md-3">
+			<h3>Projects</h3>
+		</header>
+		<div class="col-md-9">
+			<% @config["projects"].each do |item| %> 
+				<div class="item">
+					<h3><%= item["name"] %></h3>
+					<strong><%= item["role"] %></strong><br />
+					<p class="sticky"><%= item["time_span"] %></p>
+					<p class="sticky">
+						<a href="<%= item["website"] %>"><%= item["website"] %></a>
+					</p>
+					<p><%= item["summary"] %></p>
+					<ul>
+						<% item["bullet_points"].each do |point| %> 
+							<li><%= point %></li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+		</div>
+	</section>
+
 </div>
+</body>

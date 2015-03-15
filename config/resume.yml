@@ -1,0 +1,46 @@
+basic:
+  name: Yedhu Krishnan V P
+  designation: Software Engineer
+  email: yedhukrishnan@yahoo.com
+  phone: +91 8547606599
+  website: http://yedhukrishnan.com
+online_handles:
+  twitter: yedhukrishnan
+  github: yedhukrishnan
+  facebook: yedhukrishnan
+  linkedin: yedhukrishnan
+skills:
+  - title: Programming
+    contents:
+      - Ruby
+      - Java
+      - Python
+      - HTMP/HTML5/CSS
+      - Javascript
+      - C/C++
+      - Elixir
+  - title: Web Frameworks & Technologies
+    contents:
+      - Ruby on Rails
+      - Backbone JS
+      - Sails JS
+      - Android
+work_experience:
+  - company: Multunus Software
+    time_span: 2013 - present
+    designation: Product Developer
+    website: http://multunus.com
+    summary: Web/mobile development with an agile team
+    responsibilities:
+      - Frontend and backend development
+      - Test Driven Developent & pair programming
+      - Contribute to the community
+projects:
+  - name: Read
+    role: Developer 
+    time_span: Feb 2015
+    website: http://github.com/yedhukrishnan/read
+    summary: A hackernews-like site where users can post articles and others can read and upvote it
+    bullet_points:
+      - Written in Ruby on Rails
+      - Inspired from hackernews
