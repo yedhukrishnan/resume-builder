@@ -137,5 +137,33 @@
 		</div>
 	</section>
 
+  <section class="row">
+    <header class="col-md-3">
+      <h3>Education</h3>
+    </header>
+    <div class="col-md-9"> 
+      <% @config["education"].each do |item| %> 
+		    <div>
+		      <h3><%= item["institution"] %></h3>
+		      <p class="sticky"><%= item["course"] %></p>
+		      <p class="sticky"><%= item["time_span"] %></p>
+		    </div>
+      <% end %>
+    </div>
+  </section>
+  
+  <section class="row">
+		<header class="col-md-3">
+		  <h3>Interests</h3>
+		</header>
+		<div class="col-md-9">
+		<ul>
+		  <% @config["interests"].each do |interest| %>
+		  	<li><%= interest %></li>
+		  <% end %>
+		</ul>
+		</div>
+	</section>
+
 </div>
 </body>

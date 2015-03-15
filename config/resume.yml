@@ -44,3 +44,11 @@ projects:
     bullet_points:
       - Written in Ruby on Rails
       - Inspired from hackernews
+education:
+  - institution: Federal Institute of Science and Technology (FISAT), Kochi, Kerala, India
+    course: B.Tech (Computer Science and Engineering)
+    time_span: 2009 - 2013 
+interests:
+  - Machine learning
+  - Reading & writing
+  - Movies
