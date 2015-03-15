@@ -121,11 +121,11 @@
 			<% @config["projects"].each do |item| %> 
 				<div class="item">
 					<h3><%= item["name"] %></h3>
-					<strong><%= item["role"] %></strong><br />
-					<p class="sticky"><%= item["time_span"] %></p>
 					<p class="sticky">
 						<a href="<%= item["website"] %>"><%= item["website"] %></a>
 					</p>
+					<strong><%= item["role"] %></strong><br />
+					<p class="sticky"><%= item["time_span"] %></p>
 					<p><%= item["summary"] %></p>
 					<ul>
 						<% item["bullet_points"].each do |point| %> 

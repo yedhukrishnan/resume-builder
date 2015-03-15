@@ -14,14 +14,14 @@ namespace :resume do
 
 			@config = YAML.load_file "config/resume.yml"
 			@resume = ERB.new File.open("templates/1/resume.erb").read
-			File.write "resume/resume.html", @resume.result
+			File.write "resume/index.html", @resume.result
 
 			sh "cp templates/1/css/resume.css resume/css"
 			sh "cp templates/bootstrap/bootstrap.min.css resume/css"
 			sh "cp config/profile.jpg resume/img"
 
 			puts ""
-			puts "Resume created successfully. See 'resume/resume.html'"
+			puts "Resume created successfully. See 'resume/index.html'"
 		rescue Exception => e
 			puts "Error: #{e}"
 		end

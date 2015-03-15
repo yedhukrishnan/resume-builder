@@ -36,14 +36,32 @@ work_experience:
       - Test Driven Developent & pair programming
       - Contribute to the community
 projects:
+  - name: One MDM
+    role: Developer
+    time_span: Oct 2014 - Jan 2015
+    website: http://github.com/multunus/one-mdm-server
+    summary: Open source Mobile Device Management (MDM) solution
+    bullet_points:
+      - Sails JS server & Android client
+      - Ability to view device reports & execute shell scripts remotely from the server
+
   - name: Read
     role: Developer 
-    time_span: Feb 2015
+    time_span: Feb 2015 - current
     website: http://github.com/yedhukrishnan/read
     summary: A hackernews-like site where users can post articles and others can read and upvote it
     bullet_points:
-      - Written in Ruby on Rails
+      - Ruby on Rails
       - Inspired from hackernews
+
+  - name: Resume Builder
+    role: Developer
+    time_span: Mar 2015 - current
+    website: http://github.com/yedhukrishnan/resume-builder
+    summary: A tool to build online resume from provided data
+    bullet_points:
+      - Ruby
+      - The tool is used to create this resume
 education:
   - institution: Federal Institute of Science and Technology (FISAT), Kochi, Kerala, India
     course: B.Tech (Computer Science and Engineering)
