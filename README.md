@@ -7,4 +7,4 @@ git clone https://github.com/yedhukrishnan/resume-builder.git
 rake resume:build
 ```
 
-Inspired by: [habula/resume](https://github.com/hanula/resume)
+Inspired by: [hanula/resume](https://github.com/hanula/resume)
