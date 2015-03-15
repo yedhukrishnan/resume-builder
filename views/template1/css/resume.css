@@ -1,0 +1,46 @@
+h3 {
+	margin-top: 0.5em;
+}
+
+h4 {
+	margin-top: 1.1em;
+}
+
+.footer, section {
+	border-top: 1px solid #eee;
+	padding: 1em 0;
+}
+
+section p {
+	margin: 0.8em 0 0.4em 0;
+}
+
+section p.sticky {
+	margin: 0;
+}
+
+section ul {
+	margin-top: 1em;
+}
+
+img.photo {
+	width: 100px;
+	height: auto;
+	margin: 20px 0;
+}
+
+.contacts dt { width: 60px; text-align: left }
+
+.contacts dd { margin-left: 65px; }
+
+.item {
+	border-bottom: 1px solid #eee;
+}
+
+.item:last-child {
+	border-bottom: none;
+}
+
+header.main h3 {
+	margin-top: 0.3em;
+}
