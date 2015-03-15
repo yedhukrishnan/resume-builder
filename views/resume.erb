@@ -21,23 +21,20 @@
 					<div class="col-md-6 col-sm-12">
 						<dl class="contacts dl-horizontal">
 
-							<dt>Address:</dt>
-							<dd>Myślenice, Poland</dd>
-
 							<dt>Phone:</dt>
-							<dd>+48 693 320 358</dd>
+							<dd><%= @config["basic"]["phone"] %></dd>
 
 							<dt>Email:</dt>
 							<dd>
-								<a href="mailto:sebastian.hanula@gmail.com">
-									sebastian.hanula@gmail.com
+								<a href="mailto:<%= @config["basic"]["email"] %>">
+									<%= @config["basic"]["email"] %>
 								</a>
 							</dd>
 
 							<dt>Website:</dt>
 							<dd>
-								<a href="http://www.hanula.com">
-									http://www.hanula.com
+								<a href="<%= @config["basic"]["website"] %>">
+									<%= @config["basic"]["website"] %>
 								</a>
 							</dd>
 
@@ -48,29 +45,22 @@
 						<ul class="networks list-unstyled text-right">
 
 							<li>
-								<a href="https://twitter.com/hanula">
-									hanula @ twitter
+								<a href="https://twitter.com/yedhukrishnan">
+									twitter
 								</a>
 							</li>
 
 							<li>
-								<a href="https://github.com/hanula">
-									hanula @ github
+								<a href="https://github.com/yedhukrishnan">
+									github
 								</a>
 							</li>
 
 							<li>
-								<a href="https://www.linkedin.com/in/sebastianhanula">
-									sebastianhanula @ linkedin
+								<a href="https://www.linkedin.com/in/yedhukrishnan">
+									linkedin
 								</a>
 							</li>
-
-							<li>
-								<a href="https://plus.google.com/+SebastianHanula">
-									SebastianHanula @ google+
-								</a>
-							</li>
-
 						</ul>
 					</div>
 				</div>
