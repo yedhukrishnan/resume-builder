@@ -10,4 +10,4 @@ Update `config/resume.yml` with required data and replace `config/profile.jpg` w
 
     rake resume:build
 
-You are done! See the sample here: [Yedhu Krishnan](http://yedhukrishnan.github.io/resume/)
+And you are done! See the sample here: [Yedhu Krishnan](http://yedhukrishnan.github.io/resume/)
