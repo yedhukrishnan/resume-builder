@@ -31,7 +31,7 @@
 								</dd>
 								<dt>Website:</dt>
 								<dd>
-									<a href="<%= @config["basic"]["website"] %>">
+									<a href="<%= @config["basic"]["website"] %>" target="_blank">
 										<%= @config["basic"]["website"] %>
 									</a>
 								</dd>
@@ -40,17 +40,17 @@
 						<div class="col-md-6 col-sm-12">
 							<ul class="networks list-unstyled text-right">
 								<li>
-									<a href="https://twitter.com/<%= @config["online_handles"]["twitter"] %>">
+									<a href="https://twitter.com/<%= @config["online_handles"]["twitter"] %>" target="_blank">
 										twitter/<%= @config["online_handles"]["twitter"] %>
 								</a>
 							</li>
 							<li>
-								<a href="https://github.com/<%= @config["online_handles"]["github"] %>">
+								<a href="https://github.com/<%= @config["online_handles"]["github"] %>" target="_blank">
 									github/<%= @config["online_handles"]["github"] %>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.linkedin.com/in/<%= @config["online_handles"]["linkedin"] %>">
+							<a href="https://www.linkedin.com/in/<%= @config["online_handles"]["linkedin"] %>" target="_blank">
 								linkedin/in/<%= @config["online_handles"]["linkedin"] %>
 						</a>
 					</li>
@@ -88,7 +88,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<section class="row">
 		<header class="col-md-3">
 			<h3>Work Experience</h3>
@@ -100,7 +100,7 @@
 					<strong><%= item["designation"] %></strong>
 					<p class="sticky"><%= item["time_span"] %></p>
 					<p class="sticky">
-						<a href="<%= item["website"] %>"><%= item["website"] %></a>
+						<a href="<%= item["website"] %>" target="_blank"><%= item["website"] %></a>
 					</p>
 					<p><%= item["summary"] %></p>
 					<ul>
@@ -118,17 +118,17 @@
 			<h3>Projects</h3>
 		</header>
 		<div class="col-md-9">
-			<% @config["projects"].each do |item| %> 
+			<% @config["projects"].each do |item| %>
 				<div class="item">
 					<h3><%= item["name"] %></h3>
 					<p class="sticky">
-						<a href="<%= item["website"] %>"><%= item["website"] %></a>
+						<a href="<%= item["website"] %>" target="_blank"><%= item["website"] %></a>
 					</p>
 					<strong><%= item["role"] %></strong><br />
 					<p class="sticky"><%= item["time_span"] %></p>
 					<p><%= item["summary"] %></p>
 					<ul>
-						<% item["bullet_points"].each do |point| %> 
+						<% item["bullet_points"].each do |point| %>
 							<li><%= point %></li>
 						<% end %>
 					</ul>
@@ -141,8 +141,8 @@
     <header class="col-md-3">
       <h3>Education</h3>
     </header>
-    <div class="col-md-9"> 
-      <% @config["education"].each do |item| %> 
+    <div class="col-md-9">
+      <% @config["education"].each do |item| %>
 		    <div>
 		      <h3><%= item["institution"] %></h3>
 		      <p class="sticky"><%= item["course"] %></p>
@@ -151,7 +151,7 @@
       <% end %>
     </div>
   </section>
-  
+
   <section class="row">
 		<header class="col-md-3">
 		  <h3>Interests</h3>
