@@ -2,11 +2,12 @@
 	<title><%= @config["basic"]["name"] %> | Resume</title>
 	<link rel="stylesheet" type="text/css" href="css/resume.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Lora|Titillium+Web" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-9 col-md-offset-1">
 				<header class="main row">
 					<div class="header">
 						<div class="col-md-6 col-sm-12">
@@ -51,7 +52,7 @@
 						</li>
 						<li>
 							<a href="https://www.linkedin.com/in/<%= @config["online_handles"]["linkedin"] %>" target="_blank">
-								linkedin/in/<%= @config["online_handles"]["linkedin"] %>
+								linkedin/<%= @config["online_handles"]["linkedin"] %>
 						</a>
 					</li>
 				</ul>
@@ -96,12 +97,9 @@
 		<div class="col-md-9">
 			<% @config["work_experience"].each do |item| %>
 				<div class="item">
-					<h3><%= item["company"] %></h3>
+					<h3><a href="<%= item["website"] %>" target="_blank"><%= item["company"] %></a></h3>
 					<strong><%= item["designation"] %></strong>
 					<p class="sticky"><%= item["time_span"] %></p>
-					<p class="sticky">
-						<a href="<%= item["website"] %>" target="_blank"><%= item["website"] %></a>
-					</p>
 					<p><%= item["summary"] %></p>
 					<ul>
 						<% item["responsibilities"].each do |responsibility| %>
@@ -120,10 +118,11 @@
 		<div class="col-md-9">
 			<% @config["projects"].each do |item| %>
 				<div class="item">
-					<h3><%= item["name"] %></h3>
-					<p class="sticky">
-						<a href="<%= item["website"] %>" target="_blank"><%= item["website"] %></a>
-					</p>
+					<% if item["website"] %>
+						<h3><a href="<%= item["website"] %>" target="_blank"><%= item["name"] %></a></h3>
+					<% else %>
+						<h3><%= item["name"] %></h3>
+					<% end %>
 					<strong><%= item["role"] %></strong><br />
 					<p class="sticky"><%= item["time_span"] %></p>
 					<p><%= item["summary"] %></p>
@@ -145,6 +144,7 @@
       <% @config["education"].each do |item| %>
 		    <div>
 		      <h3><%= item["institution"] %></h3>
+		      <h5><%= item["location"] %></h5>
 		      <p class="sticky"><%= item["course"] %></p>
 		      <p class="sticky"><%= item["time_span"] %></p>
 		    </div>

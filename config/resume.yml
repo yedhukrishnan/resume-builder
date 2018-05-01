@@ -63,7 +63,12 @@ projects:
       - Ruby
       - The tool is used to create this resume
 education:
-  - institution: Federal Institute of Science and Technology (FISAT), Kochi, Kerala, India
+  - institution: Model Engineering College (MEC)
+    location: Kochi, Kerala, India
+    course: M.Tech (Image Processing)
+    time_span: 2017 - 2019
+  - institution: Federal Institute of Science and Technology (FISAT)
+    location: Kochi, Kerala, India
     course: B.Tech (Computer Science and Engineering)
     time_span: 2009 - 2013
 interests:
