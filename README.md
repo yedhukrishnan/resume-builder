@@ -10,4 +10,6 @@ Update `config/resume.yml` with required data and replace `config/profile.jpg` w
 
     rake resume:build
 
+This will generate your resume in `resume/` directory. Open `resume/index.html` to check it out. 
+
 And you are done! See the sample here: [Yedhu Krishnan](http://yedhukrishnan.github.io/resume/)
