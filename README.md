@@ -1,4 +1,4 @@
-# resume-builder
+# Resume Builder
 
 Ruby version of [hanula/resume](https://github.com/hanula/resume).
 
